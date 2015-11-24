@@ -9,6 +9,10 @@
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "~6.0.0",
+    "motion-ui": "~1.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
