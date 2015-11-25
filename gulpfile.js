@@ -7,6 +7,9 @@ var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
 
+var gulp = require('gulp');
+var markdown = require('gulp-markdown');
+
 // Check for --production flag
 var isProduction = !!(argv.production);
 
@@ -71,7 +74,8 @@ gulp.task('copy', function() {
 
 // Copy page templates into finished HTML files
 gulp.task('pages', function() {
-  gulp.src('src/pages/**/*.{html,hbs,handlebars}')
+  gulp.src('src/pages/**/*.{md,html,hbs,handlebars}')
+    .pipe(markdown())
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',

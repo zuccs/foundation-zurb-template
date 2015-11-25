@@ -1,0 +1,16 @@
+---
+nav: Sitemap
+
+metatitle: Sitemap
+metadesc: 
+---
+
+<h1>Sitemap</h1>
+
+<ul>
+	{{#each pages}}
+		{{#isnt data.exclude true}}
+			<li><a href="{{relative ../../page.dest this.dest}}">{{ data.nav }}</a></li>
+		{{/isnt}}
+	{{/each}}
+</ul>
