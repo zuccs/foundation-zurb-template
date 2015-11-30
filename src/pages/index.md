@@ -1,6 +1,9 @@
 ---
-metatitle: default
+metatitle: Homepage
+
+canonical: true
 ---
+
 {{#markdown}}
 ## Home
 

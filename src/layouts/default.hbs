@@ -5,17 +5,13 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>{{data.metatitle}} - {{site.title}}</title>
+		<title>{{metatitle}} - {{site.title}}</title>
 
 		<meta name="description" content="{{metadesc}}">
 
-		{{#if page.canonical}}
-		<link rel="canonical" href="{{site.url}}{{page.url}}" />
-		{{/if}}
+		{{#if canonical}}<link rel="canonical" href="{{site.url}}{{page.url}}" />{{/if}}
 
-		{{#if page.exclude}}
-		<meta name="robots" content="noindex" />
-		{{/if}}
+		{{#if exclude}}<meta name="robots" content="noindex" />{{/if}}
 
 		<link href="/assets/css/app.css" rel="stylesheet">
 
@@ -46,11 +42,8 @@
 	<div class="row">
 			
 		<div class="small-12 columns">
-			
-			
 
 			{{>body}}
-
 
 		</div><!-- small-12 -->
 
